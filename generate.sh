@@ -71,3 +71,4 @@ git add .
 
 git commit -m "Update code & fix typos."
 
+git push origin master
