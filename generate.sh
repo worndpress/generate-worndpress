@@ -37,7 +37,7 @@ rm src/wp-content/plugins/hello.php # Re implement https://github.com/worndpress
 # Re implement https://github.com/worndpress/Worndpress/pull/5
 rm src/README.md
 wget https://patch-diff.githubusercontent.com/raw/worndpress/Worndpress/pull/5.patch
-cd src && exit
+cd src || exit
 patch < ../5.patch
 cd ../ || exit
 rm 5.patch
@@ -52,4 +52,4 @@ git add .
 
 git commit -m "Update code & fix typos."
 
-# git push origin master
+git push origin master
