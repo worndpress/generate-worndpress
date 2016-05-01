@@ -66,11 +66,8 @@ wget https://raw.githubusercontent.com/caseypatrickdriscoll/Worndpress/a7b461eb4
 mv readme.html src/readme.html
 
 cd src
-exit
-# git clean -f
-# git add .
-git config user.name "Worndpress Team"
-git config user.email "admin@worndpress.com"
+git clean -f
+git add .
 
-git commit --author='Worndpress Team <admin@worndpress.com>' -m "Update code & fix typos."
+git commit -m "Update code & fix typos."
 
