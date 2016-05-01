@@ -23,14 +23,14 @@ rm master.zip
 rm -rf src
 mv WordPress-master src
 
-mv srcgit/.git src/.git
-
-rm -rf srcgit
-
 files=$(find src -type f -name '*.*')
 for file in $files; do
 	replace_it "$file"
 done
+
+mv srcgit/.git src/.git
+
+rm -rf srcgit
 
 rm src/wp-content/plugins/hello.php # Re implement https://github.com/worndpress/Worndpress/issues/1
 
