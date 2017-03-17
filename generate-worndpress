@@ -20,6 +20,9 @@ replace_it(){
 		# make all the correct changes
 		sed -i.bak 's/WordPress/Worndpress/g' "$1"
 
+		# urls too
+		sed -i.bak 's/wordpress.org/worndpress.org/g' "$1"
+
 		# https://github.com/worndpress/Worndpress/commit/a84bd3cdf4820079afcbe8c901d01780444e0773
 		sed -i.bak 's/capital_P_dangit/lowercase_p_and_also_an_n_dangit/g' "$1"
 		rm "$1".bak
@@ -52,10 +55,6 @@ cd src || exit
 patch < ../5.patch
 cd ../ || exit
 rm 5.patch
-
-# Re implement https://github.com/worndpress/Worndpress/pull/3
-wget https://raw.githubusercontent.com/caseypatrickdriscoll/Worndpress/a7b461eb45949661d488c96935a63c67726a1a5f/readme.html
-mv readme.html src/readme.html
 
 cd src || exit
 git clean -f
